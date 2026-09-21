@@ -92,45 +92,6 @@
 
             </span>
           </div>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-
-            <!-- Supplementary Video link -->
-            <span class="link-block">
-              <a href="https://www.bilibili.com/videos/BV1RTs6eoEFd/?spm_id_from=333.1387.upload.video_card.click&vd_source=8b7ea6f36c3681316c4ad0d77fd6e92a" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fab fa-bilibili"></i>
-              </span>
-              <span>Go1 Video</span>
-              </a>
-            </span>
-
-            <!-- Supplementary Video link -->
-            <span class="link-block">
-              <a href="https://www.bilibili.com/videos/BV1tC66YTEV2/?spm_id_from=333.1387.upload.video_card.click&vd_source=8b7ea6f36c3681316c4ad0d77fd6e92a" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fab fa-bilibili"></i>
-              </span>
-              <span>SDUQuad48 Video</span>
-              </a>
-            </span>
-
-            <!-- Github link -->
-            <span class="link-block">
-              <a href="https://github.com/SUCRO-Legged/ALARM" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fab fa-github"></i>
-              </span>
-              <span>Code</span>
-              </a>
-            </span>
-
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -141,6 +102,7 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <h2 class="title is-2 has-text-centered">Supplementary Video</h2>
       <video poster="" id="teaser-video" autoplay controls muted loop playsinline width="100%">
         <source src="./resources/videos/full-test-1.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -232,7 +194,7 @@
         <h2 class="title is-2 has-text-centered">Motion Generation</h2>
         <div class="columns">
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/motion_generation.mp4" width="100%"></video><p class="has-text-centered">Generation in Webots</p></div>
-          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/motion_replay.mp4" width="100%"></video><p class="has-text-centered">Replay in IsaacSim</p></div>
+          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/motion_replay.mp4" width="100%"></video><p class="has-text-centered">Replay Example in IsaacSim</p></div>
         </div>
         <hr class="my-6">
         <h2 class="title is-2 has-text-centered">Training in Simulation</h2>
@@ -252,7 +214,7 @@
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/biped-grass-1.mp4" width="100%"></video><p class="has-text-centered">Uneven Ground</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/biped-random-rough-1.mp4" width="100%"></video><p class="has-text-centered">Recovery</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/biped-slope-indoor-1.mp4" width="100%"></video><p class="has-text-centered">Rough Slope</p></div>
-          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/biped-soft-1.mp4" width="100%"></video><p class="has-text-centered">Soft Cushion</p></div>
+          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/biped-soft-1.mp4" width="100%"></video><p class="has-text-centered">Compliant Mat</p></div>
         </div>
 
         <h3 class="title is-3 has-text-centered">Quadrupedal Locomotion</h3>
@@ -268,7 +230,7 @@
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-random-rough-1.mp4" width="100%"></video><p class="has-text-centered">Random Rough</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-cube-1.mp4" width="100%"></video><p class="has-text-centered">Cube</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-rough-step-1.mp4" width="100%"></video><p class="has-text-centered">Rough Step</p></div>
-          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-soft-step-1.mp4" width="100%"></video><p class="has-text-centered">Soft Step</p></div>
+          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-soft-step-1.mp4" width="100%"></video><p class="has-text-centered">Compliant Step</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-downstairs-outdoor-1.mp4" width="100%"></video><p class="has-text-centered">Down stairs Outdoor</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-floating-step-1.mp4" width="100%"></video><p class="has-text-centered">Floating Step</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-upslope-downstairs-1.mp4" width="100%"></video><p class="has-text-centered">Up slope and Down stairs</p></div>
@@ -288,7 +250,29 @@
         <h2 class="title is-2">Conclusion</h2>
         <div class="content has-text-justified">
           <p>
-            To be continued...
+            This paper presented a scalable locomotion learning framework for
+            reconfigurable modular multi-legged robots, with the central idea of
+            transferring reusable model-based bipedal priors across different
+            morphologies. Rather than redesigning locomotion controllers or relearning
+            motion behaviors for each assembled configuration, the proposed framework
+            retains the learned bipedal priors and adapts them to multi-legged
+            morphologies through residual learning. Extensive simulation and real-world
+            experiments demonstrate that the learned bipedal priors preserve
+            model-based locomotion characteristics and provide effective guidance for
+            subsequent morphology transfer. The proposed framework improves learning
+            efficiency and enables robust locomotion across different configurations on challenging terrains, demonstrating the
+            effectiveness and scalability of the proposed approach.
+            <br>
+            These results show that locomotion knowledge learned from a basic robotic
+            module can serve as reusable priors for more complex assembled
+            morphologies. More importantly, the proposed framework establishes a direct
+            connection between physical modularity and policy-level knowledge reuse,
+            such that robot reconfiguration does not require locomotion learning to
+            restart from scratch. This provides a practical foundation for scalable
+            locomotion learning in reconfigurable legged robotic systems. Future work
+            will investigate more diverse module combinations and connection topologies,
+            and extend the framework toward broader terrain conditions and more general
+            real-world deployment scenarios.
           </p>
         </div>
       </div>
@@ -304,7 +288,9 @@
       <pre>
         <code>      
           @article{
-            To be continued...
+            author = {Zhou, Qiqi and Sun, Entao and Song, Rui and Zhu, Zhengguo and Zhang, Jingwen and Zhang, Guoteng},
+            title = {Residual Reinforcement Learning for Modular Multi-Legged Locomotion via Model-Based Primitive Priors},
+            year = {2026}
           }
         </code>
       </pre>
