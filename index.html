@@ -59,7 +59,7 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            <span style="font-weight: normal;"><b>Residual Reinforcement Learning for Modular Multi-Legged Locomotion via Model-Based Primitive Priors</b></span>
+            <span style="font-weight: normal;"><b>Residual Reinforcement Learning with Reusable Bipedal Primitives for Modular Multi-Legged Locomotion</b></span>
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -126,10 +126,9 @@
             making efficient and robust locomotion control across different morphologies
             challenging. This paper proposes a scalable locomotion primitive transfer
             framework that leverages model-based bipedal priors and residual reinforcement
-            learning for locomotion across different multi-legged morphologies.
-            Dynamically feasible bipedal demonstrations are first generated using a
+            learning for locomotion across different multi-legged morphologies. Specifically, dynamically feasible bipedal demonstrations are first generated using a
             model-based control pipeline that combines contact-force optimization and
-            whole-body control. Then, the demonstrations are used to learn a command-matching adversarial motion prior, yielding a reusable bipedal primitive policy. Finally, the learned bipedal priors are frozen and reused for morphology transfer. Morphology-specific residual policies adapt the primitives to different multi-legged configurations, with permutation symmetry promoting coordinated actions among primitive groups. Simulation and real-world experiments demonstrate that the proposed framework provides a unified approach to locomotion transfer across reconfigurable 2N-legged morphologies, while enabling robust locomotion on challenging terrains.
+            whole-body control. Then, the demonstrations are used to learn command-matching adversarial motion priors, yielding a reusable bipedal primitive policy. Finally, the learned bipedal priors are frozen and reused for morphology transfer. Morphology-specific residual policies adapt the primitives to different multi-legged configurations, with permutation symmetry promoting coordinated actions among primitive groups. Simulation and real-world experiments demonstrate that the proposed framework provides a unified approach to locomotion transfer across reconfigurable $2N$-legged morphologies, while enabling robust locomotion on challenging terrains.
           </p>
         </div>
       </div>
@@ -147,14 +146,17 @@
         <img src="./resources/images/system.svg" alt="System" style="width: 100%; height: auto; margin-bottom: 20px;" data-immersive-translate-walked="246d7402-74de-46fe-bdda-4a3edd1c0f55">
         <div class="content has-text-justified">
           <p>
-            Overview of the modular legged robotic platform and real-world
-            terrain adaptation. (a) Modular robotic system consisting of reusable bipedal
-            units and standardized docking interfaces. The exploded view illustrates the
-            mechanical structure of the docking interface, through which multiple bipedal
-            units can be assembled into different 2N -legged morphologies. (b) Real-world
-            deployment demonstrating enhanced terrain adaptation of the bipedal unit
-            and locomotion of reconfigured multi-legged robots on challenging terrains,
-            including uneven ground, stairs, and discrete steps.
+            Overview of the modular legged robotic platform and
+            real-world terrain adaptation.
+            <b>Top:</b> Modular robotic system consisting of reusable bipedal units
+            and standardized docking interfaces. The exploded view illustrates
+            the mechanical structure of the docking interface, through which
+            multiple bipedal units can be assembled into different
+            $2N$-legged morphologies.
+            <b>Bottom:</b> Real-world deployment demonstrating enhanced terrain adaptation
+            of the bipedal unit and locomotion of reconfigured multi-legged
+            robots on challenging terrains, including uneven ground,
+            stairs, and discrete steps.
           </p>
         </div>
       </div>
@@ -231,10 +233,11 @@
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-cube-1.mp4" width="100%"></video><p class="has-text-centered">Cylindrical Obstacle</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-rough-step-1.mp4" width="100%"></video><p class="has-text-centered">Rough Step</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-soft-step-1.mp4" width="100%"></video><p class="has-text-centered">Deformable Step</p></div>
-          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-downstairs-outdoor-1.mp4" width="100%"></video><p class="has-text-centered">Down stairs Outdoor</p></div>
-          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-floating-step-1.mp4" width="100%"></video><p class="has-text-centered">Floating Step</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-upslope-downstairs-1.mp4" width="100%"></video><p class="has-text-centered">Up slope and Down stairs</p></div>
           <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-upstairs-downslope-1.mp4" width="100%"></video><p class="has-text-centered">Up stairs and Down slope</p></div>
+          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-downstairs-outdoor-1.mp4" width="100%"></video><p class="has-text-centered">Down stairs Outdoor</p></div>
+          <div class="column is-half"><video autoplay muted loop playsinline controls src="./resources/videos/hex-floating-step-1.mp4" width="100%"></video><p class="has-text-centered">Floating Step</p></div>
+
         </div>
       </div> 
     </div>
@@ -257,22 +260,26 @@
             motion behaviors for each assembled configuration, the proposed framework
             retains the learned bipedal priors and adapts them to multi-legged
             morphologies through residual learning. Extensive simulation and real-world
-            experiments demonstrate that the learned bipedal priors preserve
-            model-based locomotion characteristics and provide effective guidance for
-            subsequent morphology transfer. The proposed framework improves learning
-            efficiency and enables robust locomotion across different configurations on challenging terrains, demonstrating the
-            effectiveness and scalability of the proposed approach.
+            experiments demonstrate that the bipedal priors preserve model-based
+            locomotion characteristics and provide effective guidance for subsequent
+            morphology transfer. The proposed framework improves learning efficiency
+            and enables robust locomotion across different configurations on
+            challenging terrains.
             <br>
             These results show that locomotion knowledge learned from a basic robotic
             module can serve as reusable priors for more complex assembled
-            morphologies. More importantly, the proposed framework establishes a direct
+            morphologies. More importantly, the framework establishes a direct
             connection between physical modularity and policy-level knowledge reuse,
-            such that robot reconfiguration does not require locomotion learning to
-            restart from scratch. This provides a practical foundation for scalable
-            locomotion learning in reconfigurable legged robotic systems. Future work
-            will investigate more diverse module combinations and connection topologies,
-            and extend the framework toward broader terrain conditions and more general
-            real-world deployment scenarios.
+            allowing robot reconfiguration without restarting locomotion learning
+            from scratch. The primitive-and-residual architecture also provides a
+            potential basis for other modular robotic systems, where
+            reusable local controllers can be combined with
+            configuration-specific residual policies to accommodate
+            inter-module interactions. 
+            With appropriate modeling of the underlying primitives
+            and their interactions, the proposed architecture has
+            the potential to be transferred to other modular robotic
+            platforms and even multi-robot systems.
           </p>
         </div>
       </div>
@@ -289,7 +296,7 @@
         <code>      
           @article{
             author = {Zhou, Qiqi and Sun, Entao and Song, Rui and Zhu, Zhengguo and Zhang, Jingwen and Zhang, Guoteng},
-            title = {Residual Reinforcement Learning for Modular Multi-Legged Locomotion via Model-Based Primitive Priors},
+            title = {Residual Reinforcement Learning with Reusable Bipedal Primitives for Modular Multi-Legged Locomotion},
             year = {2026}
           }
         </code>
