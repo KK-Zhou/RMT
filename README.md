@@ -22,6 +22,8 @@ http://localhost:8000/
 If you find our paper or repositories helpful to your research, please consider citing the paper:
 ```
 @article{
-    
+    author = {Zhou, Qiqi and Sun, Entao and Song, Rui and Zhu, Zhengguo and Zhang, Jingwen and Zhang, Guoteng},
+    title = {Residual Reinforcement Learning with Reusable Bipedal Primitives for Modular Multi-Legged Locomotion},
+    year = {2026}
 }
 ```
